@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* homepage */
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
+  padding: 0px 120px;
+}
+nav a {
+  text-decoration: none;
+}
+.imgNav {
+  width: 130px;
+  height: 40px;
+}
+/* content  */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  height: 65%;
+}
+
+.parag {
+  width: 40%;
+  padding: 17px;
+}
+
+.parag h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: rgb(5, 189, 5);
+}
+
+.parag p {
+  font-size: 32px;
+  color: black;
+  font-size: bold;
+  margin-bottom: 18px;
+}
+
+.btn1 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(5, 189, 5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.btn2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white;
+  color: rgb(73, 73, 239);
+  border: none;
+  box-shadow: 2px 2px 0 0 gray;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.image {
+  width: 280px;
+  padding: 20px;
+}
+
+.btnLang {
+  padding: 10px 20px;
+  background-color: rgb(5, 189, 5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.optios {
+  display: none; /* لنجعلها تختفي في الوضع العادي*/
+  /* fi hal lam yatim tahdid position lil 3onsor l abe by5od position relative  */
+  position: absolute; /*  هنا من اجل تنسيق مكان الخيارات بالنسبة لل ديف الاب وليس بالنسبة للصفحة*/
+  background-color: white;
+  width: 130px;
+}
+
+.optios a {
+  padding: 10px 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.optios a:hover {
+  background-color: rgb(5, 189, 5);
+  border-radius: 20px;
+}
+/* hun yaani bs e3mml hover al divlanguage rouh al optios we 5aliha tbayin yaan display block */
+.divLanguage:hover .optios {
+  display: block;
+}
+/* footer */
+
+footer {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 15%;
+  border-top: 2px solid gray;
+}
+
+footer a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  padding: 10px;
+}
+/* responsive */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image {
+    display: none;
+  }
+
+  .parag,
+  .image {
+    width: 90%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .parag button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .parag h1 {
+    font-size: 22px;
+  }
+
+  .parag p {
+    font-size: 14px;
+  }
+
+  .parag button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  footer a {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .imgNav {
+    width: 100px;
+    height: auto;
+  }
+}
+
+/* section */
+.PerSEC {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.PerSEC span {
+  color: rgb(102, 102, 227);
+}
+.parag1 {
+  width: 40%;
+  color: gray;
+  font-size: 19px;
+}
+.PerSEC h2 {
+  color: rgb(5, 189, 5);
+
+  font-size: 40px;
+}
+.parag1 p {
+  width: 85%;
+}
+
+.PerSEC img {
+  width: 30%;
+  border-radius: 40%;
+}
+/* responsive */
+@media (max-width: 768px) {
+  .PerSEC {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .PerSEC h2 {
+    font-size: 20px;
+  }
+  .parag1 {
+    font-size: 10px;
+  }
+}
+
+/* suuper do */
+.supperDo {
+  background-color: #020237;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  gap: 20px;
+}
+.supperDo img {
+  width: 50%;
+  height: 400px;
+  border-radius: 40%;
+}
+.supperDo h3 {
+  color: white;
+  font-size: large;
+  text-align: center;
+  font-size: 30px;
+}
+.supperDo h1 {
+  background: linear-gradient(to right, #26e27e, #0072ff, #db5dff);
+  background-clip: text;
+  color: transparent;
+  font-size: 40px;
+}
+.parag2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.parag2 button {
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  font-size: 20px;
+  height: 58px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 0 gray;
+  margin-top: 10px;
+  cursor: pointer;
+}
+/* responsive */
+@media (max-width: 768px) {
+  .supperDo {
+    flex-direction: column;
+  }
+  .supperDo img {
+    height: 50%;
+  }
+  .supperDo h1 {
+    font-size: 20px;
+  }
+}
+/* schools */
+.schools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  gap: 20px;
+}
+.schools img {
+  width: 40%;
+  height: 200px;
+  border-radius: 40%;
+}
+.parag3 {
+  width: 40%;
+  text-align: center;
+}
+.parag3 h1 {
+  color: rgb(5, 189, 5);
+}
+.parag3 p {
+  color: gray;
+}
+.parag3 button {
+  background-color: white;
+  color: #43bef8;
+  border-radius: 2px;
+  font-size: 20px;
+  height: 58px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 0 gray;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.parag3 button:hover {
+  background-color: gray;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .schools {
+    flex-direction: column;
+  }
+  .parag3 button {
+    font-size: 10px;
+  }
+}
